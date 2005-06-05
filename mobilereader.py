@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# vim: fileencoding=euc-jp
 # coding: euc-jp
 import nkf
 print "普通の日本語"
