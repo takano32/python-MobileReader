@@ -2,10 +2,16 @@
 # vim: fileencoding=euc-jp
 # coding: euc-jp
 import os
+from Cheetah.Template import Template
 import nkf
-print u"普通の日本語"
-print unicode("日本語の量が", "japanese.euc_jp")
-print unicode("少ないとご認識", "japanese.euc_jp")
+
+template = Template(file='cheetah.tmpl')
+template.entry = [
+  {'title': "日本語", 'description': '内容 1, blah blah'},
+  {'title': "タイトル", 'description': '内容 2, blah, blah'}
+  ]
+print template
+
 
 
 for (root, dirs, files) in os.walk(u"."):
