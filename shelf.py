@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 import fnmatch
-import book
+#import book
 class Shelf:
   def __init__(self, path, pattern):
     self.path = os.path.abspath(path)
@@ -14,7 +14,7 @@ class Shelf:
     for(root, dirs, files) in os.walk(self.path):
       for file in files:
         if fnmatch.fnmatch(file, self.pattern):
-          alist.append(file)
+          alist.append(os.path.join(root, file))
     return alist
 
 shelf = Shelf("./maria", "*.txt")
