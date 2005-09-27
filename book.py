@@ -32,7 +32,7 @@ class Book:
     return body
 
 book = Book('/home/takano32/cvswork/python/'
-                + 'mobilereader/maria/readme.txt', 200)
+                + 'mobilereader/readme.txt', 200)
 
 print book.max_page()
 
